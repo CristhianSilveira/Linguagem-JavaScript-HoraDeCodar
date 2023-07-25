@@ -199,32 +199,66 @@ OBS: console.log vai ajudar muito nas dúvidas.
     12.2- Métodos DOM: 
         Os métodos DOM são ações que você pode executar (em elementos HTML). No DOM, todos os elementos HTML são definidos como objetos.   EX: document.getElementById("Exemplo").innerHTML = "Olá Mundo!";  OBS: A propriedade innerHTML pode ser usada para obter ou alterar qualquer elemento HTML.
     
-    12.2- Documento DOM: 
+    12.3- Documento DOM: 
         O objeto de documento DOM é o proprietário de todos os outros objetos em sua página da web.
         
-        12.2.1- O objeto de documento DOM: 
+        12.3.1- O objeto de documento DOM: 
             O objeto de documento representa sua página da web. Se você quiser acessar qualquer elemento em uma página HTML, sempre comece acessando o objeto do documento. Abaixo estão alguns exemplos de como você pode usar o objeto de documento para acessar e manipular HTML.
 
-        12.2.2- Adicionando e Excluindo Elementos: 
-            document.createElement(element)	[Cria um elemento HTML], document.removeChild(elemento) [Remove um elemento HTML], document.appendChild(elemento) [Adiciona um elemento HTML], document.replaceChild(novo, antigo)	[Substituir um elemento HTML] e document.write(texto) [Escreve no fluxo de saída do HTML].
-
-        12.2.3- Adicionando manipuladores de eventos: 
-            document.getElementById(id).onclick = function(){code} [Adicionando o código do manipulador de eventos a um evento onclick]
-
-    12.3- Elementos DOM: 
+    12.4- Encontrando Elementos DOM: 
         Encontrando Elementos HTML, Existem várias maneiras de fazer isso: Encontrando elementos HTML por id, Encontrando elementos HTML por nome de tag, Encontrando elementos HTML por nome de classe, Encontrando elementos HTML por seletores CSS.
         
-        12.3.1- Encontrando Elemento HTML por Id: 
+        12.4.1- Encontrando Elemento HTML por Id: 
             A maneira mais fácil de encontrar um elemento HTML no DOM é usando o id do elemento.   EX: const element = document.getElementById("intro");  >>Explicando: Este exemplo encontra o elemento com id="intro":
 
-        12.3.2- Encontrando elementos HTML por nome de tag:   
+        12.4.2- Encontrando elementos HTML por nome de tag:   
             EX: const element = document.getElementsByTagName("p");  >>Explicando: Este exemplo localiza todos os elementos <p> 
 
-        21.3.3- Encontrando Elementos HTML por Nome de Classe: 
+        21.4.3- Encontrando Elementos HTML por Nome de Classe: 
             Se você deseja localizar todos os elementos HTML com o mesmo nome de classe, use getElementsByClassName().   EX: const x = document.getElementsByClassName("intro");  >>Explicando: Este exemplo retorna uma lista de todos os elementos com class="intro".
 
-        21.3.4- Encontrando Elementos HTML por Seletores CSS: 
-            Se você quiser encontrar todos os elementos HTML que correspondem a um seletor CSS especificado (id, nomes de classes, tipos, atributos, valores de atributos, etc.), use o querySelectorAll()método.   EX: const x = document.querySelectorAll("p.intro");  >>Explicando: Este exemplo retorna uma lista de todos os elementos <p> com class="intro".
+        21.4.4- Encontrando Elementos HTML por Seletores CSS: 
+            Se você quiser encontrar todos os elementos HTML que correspondem a um seletor CSS especificado (id, nomes de classes, tipos, atributos, valores de atributos, etc.), use o método querySelectorAll().   EX: const x = document.querySelectorAll("p.intro");  >>Explicando: Este exemplo retorna uma lista de todos os elementos <p> com class="intro".
 
-    12.4- 
+    12.5- Alterando HTML: 
+        12.5.1- Introdução:
+            O DOM permite que o JavaScript altere o conteúdo dos elementos HTML.
+        
+        12.5.2- Alterar o Conteúdo HTML com innerHTML: 
+            A maneira mais fácil de modificar o conteúdo de um elemento HTML é usando a propriedade innerHTML. Para alterar o conteúdo de um elemento HTML, use esta sintaxe: variável.innerHTML = new HTML   EX: var title = document.querySelector('#title');  title.innerHTML = "Novo titulo";  >>Explicando: JavaScript mudou o texto de title para "Novo título".
+
+        12.5.3- Alterar o Conteúdo HTML com textContent:
+            A propriedade textContent é a mais recomendada para modificar um elemento HTML. Sintaxe: variável.textContent = new HTML   EX: var title = document.querySelector('#title');  title.textContent = "Testando o texto alterado!";
+
+        12.5.3- Alterando o valor de um atributo: 
+            Para alterar o valor de um atributo HTML, use esta sintaxe: document.getElementById(id).attribute = new value   EX: document.getElementById("MinhaImagem").src = "landscape.jpg"; >>Explicando: JavaScript mudou a imagem de MinhaImagem para landscape.jpg.
+
+        12.5.4- document.write(): 
+            Em JavaScript, document.write() pode ser usado para gravar diretamente no fluxo de saída HTML.   EX: document.write("Eu amo JavaScript");
+    
+    
+    
+    12.5- Adicionando e Excluindo Elementos:
+        12.5.1- Criando um elemento HTML:
+            Para criar um elemento HTML, use a propriedade: document.createElement([elemento]).   EX: var span = document.createElement("span");   >>Explicando: cria um span
+            
+        12.5.2- Remover elemento filho no HTML:
+            Para remover elemento filho no HTML, use a propriedade: document.removeChild([elemento]).  EX: var container = document.querySelector('#container');  var p = document.querySelector('#container p');  container.removeChild(p);
+
+        12.5.3- Remover elemento no HTML:
+            Para remover um elemento no HTML, use a propriedade: document.remove([elemento]).   EX: var removido = document.querySelector('#removido');  removido.remove();
+            
+        
+        
+        
+        
+        
+        12.5.4- Inserir elemento no HTML:
+            document.appendChild(elemento) [Adiciona um elemento HTML], 
+        
+        
+        document.replaceChild(novo, antigo)	[Substituir um elemento HTML] e document.write(texto) [Escreve no fluxo de saída do HTML].
+
+        12.3.3- Adicionando manipuladores de eventos: 
+            document.getElementById(id).onclick = function(){code} [Adicionando o código do manipulador de eventos a um evento onclick]
 
