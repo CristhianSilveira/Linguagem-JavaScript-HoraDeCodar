@@ -1,0 +1,230 @@
+                    Hora De Codar --- JavaScript ---
+
+OBS: console.log vai ajudar muito nas dúvidas.
+
+1- Introdução:
+    1.1- O que é JavaScript:
+        É uma linguagem de alto nível; auxilia na criação de páginas; Tipagem fraca;
+
+    1.2- Para que serve o JS:
+        Cria eventos em uma página; Manipula elementos e estilos(DOM); Pode ser utilizado no back-end(Node.js);
+
+    1.3- Inserindo JS no HTML:
+        Digitar <script> {conteúdo} </script> no body; Ou Digitar <script src="{link do arquivo JS}"> </script> no body [Recomendado]; Ou Digitar <script src="{link do arquivo JS}"> </script> no head;
+
+    1.4- Sobre a linguagem:
+        Código executado de cima para baixo; É case sensitive (Diferencia maiúscula de minuscula); Ponto e vírgula é opcional; Os comentários são (// [Única linha]) e (/* */ [Múltiplas linhas]);
+
+2- Variáveis:
+    2.1- Variáveis:
+        Armazenam valores; Valores podem ser usados posteriormente; Existem 3 formas [var, let, const]; tipagem fraca;
+
+    2.2- Identificadores JavaScript: 
+        Todas as variáveis ​​JavaScript devem ser identificadas com nomes exclusivos. Os identificadores podem ser nomes curtos (como x e y) ou nomes mais descritivos (idade, valor, totalVolume). As regras gerais para a construção de nomes para variáveis são: Os nomes podem conter letras, dígitos, sublinhados e cifrões. Os nomes devem começar com uma letra. Os nomes também podem começar com $ e _ . Os nomes diferenciam maiúsculas de minúsculas (y e Y são variáveis ​​diferentes).
+
+    2.3- Variável Let:
+        Variáveis ​​definidas com let não podem ser Redeclaradas. As variáveis ​​definidas com let devem ser declaradas antes do uso. Variáveis ​​definidas com let têm escopo de bloco(não pode ser acessada fora do bloco).
+
+    2.4- Variável Const:
+        Variáveis ​​definidas com const não podem ser Redeclaradas. As variáveis ​​definidas com const não podem ser reatribuídas. Variáveis ​​definidas com const têm escopo de bloco. Sempre declare uma variável com const quando souber que o valor não deve ser alterado.
+
+3- Tipos De Dados:
+    3.1- Number:
+        É do tipo para números; Todo número é number; NaN (Não é um número), ocorre quando usamos uma operação de número com string;
+
+    3.2- String:
+        É do tipo para textos; Usado em aspas simples ou duplas; Número entre aspas é uma string; Usamos (+) para concatenar strings;
+
+    3.3- Boolean:
+        Representa um valor true (verdadeiro) ou false (falso); Comparações resultam em booleans;
+
+    3.4- Null:
+        É uma variável vazia no inicio para ter um valor no fim.
+
+    3.5- Undefined:
+        É uma variável criada sem valor.
+
+    3.6- Object:
+        Objetos JavaScript são escritos com chaves {}; As propriedades do objeto são escritas como pares nome:valor, separados por vírgulas; É guardado seu valor pra ser usado depois;   EX: var pessoa = {PrimeiroNome:"João", Sobrenome:"Silva", idade:50, CorOlho:"Azul"};
+
+    3.7- Operador typeof:
+        Retorna o tipo da variável;   EX: var Frase = "Teste"   console.log(typeof Frase);  >>Resultado: string
+
+    3.8- Arrays:
+        São considerados objetos em JS e serve como uma lista; As propriedades são por índice; Usa-se o colchete;
+
+4- Operadores:
+    4.1- Operadores Aritméticos: 
+        + (adição); - (Subtração); * (Multiplicação); ** (Exponenciação); / (Divisão); % Módulo (Resto da divisão); ++ (Incremento);  -- (Decremento);
+
+    4.2- Operadores de Atribuição: 
+        =; +=; -=; *=; /=; %=; **=;
+
+    4.3- Operadores de Comparação:
+        == (igual a); === (valor igual e tipo igual); != (diferente); !== (valor diferente e tipo diferente); > (maior que); < (menor que); >= (maior ou igual a); <= (menor ou igual a); ? (operador ternário);
+
+    4.4- Operadores Lógicos:
+        && (E); || (OU); ! (não);
+
+    4.5- Operadores Condicionais:
+        4.5.1- Operador IF:
+            Executa o bloco de código se a instrução for verdadeira, se for falsa, não entra no bloco; IF significa "se"; Sintaxe: if(condição)  { bloco de instrução }
+
+        4.5.2- Operador Else:
+            Executa o bloco de código se a instrução for falsa, se for verdadeira, não entra no bloco; Else significa "senão";. Sintaxe: if (condição)  { bloco de instrução } else  { bloco de instrução }
+
+        4.5.3- Operador Else IF:
+            Use a instrução else if para especificar uma nova condição se a primeira condição for falsa.; Else IF significa "senão se";Sintaxe: if (condição1)  { executa, se a condição 1 for verdadeira }else if (condição2)  { executa, se a condição1 for falsa e a condição2 for verdadeira } else {executa, se a condição1 e condição2 forem falsas }
+
+5- Estrutura de Repetição:
+    5.1- Loop WHILE: 
+        O loop while(enquanto) percorre um bloco de código, desde que uma condição especificada seja verdadeira. Sintaxe: while (condição) { Bloco de execução }
+
+    5.2- Loop FOR: 
+        A instrução for(para) cria um loop com 3 expressões opcionais. Sintaxe: for (variável; condição; incremento) { Bloco de execução }
+    
+    5.3- Break e Continue:
+        A instrução Break quando utilizada em um loop interrompe a sequência do loop. A instrução continue, continua a execução do loop pulando apenas o valor informado.
+
+    5.4- Switch Case: 
+        A instrução switch é usada para executar diferentes ações com base em diferentes condições. Sintaxe: switch(expressão) { case x:  bloco de instrução  break;  case y:  bloco de instrução  break;  default: bloco de instrução }
+
+6- Funções:
+    6.1- Introdução:
+        São blocos de códigos reutilizáveis; precisa ser invocada para ser executada; Sintaxe: function NomeDaFunção(parâmetro/argumento) {bloco de execução}
+
+7- Escopo:
+    7.1- Introdução:
+        O escopo determina a acessibilidade (visibilidade) das variáveis. Em JavaScript tem 3 tipos de escopo: Escopo de bloco, Escopo Local e Escopo global.
+
+    7.2- Escopo de Bloco:
+        O ES6 introduziu duas novas palavras-chave importantes do JavaScript: let e const. Essas duas palavras-chave fornecem escopo de bloco em JavaScript. Variáveis ​​declaradas dentro de um bloco { } não podem ser acessadas de fora do bloco.
+
+    7.3- Escopo Global:
+        É iniciado em toda a aplicação
+
+    7.4- Escopo Local:
+        É inicia em uma parte da aplicação, só pode ser acessada dentro de algum local.
+        As variáveis ​​declaradas dentro de uma função JavaScript tornam-se LOCAL para a função.
+
+8- Métodos Numéricos:
+    8.1- Introdução:
+        Esses métodos numéricos podem ser usados ​​em todos os números JavaScript.
+
+    8.2- parseFloat(): 
+        Analisa seu argumento e retorna um número de ponto flutuante.   EX:  parseFloat("10 anos")  >>Resultado: 10 
+
+    8.3- parseInt(): 
+        Analisa seu argumento e retorna um número inteiro.   EX:  parseInt("10.96 anos")  >>Resultado: 10
+
+    8.4-  toFixed(): 
+        Retorna um número escrito com um número de casas decimais.   EX: let x = 9.656; x.toFixed(2);  >>Resultado: 9,66
+
+    8.5- isNAN():
+        Analisa seu argumento e retorna true ou false.
+
+9- Métodos String:
+    9.1- Introdução:
+        Strings são para armazenar e manipular texto. Você pode usar aspas simples ou duplas. Para encontrar o comprimento de uma string use a propriedade interna length. Uma maneira mais segura de quebrar uma string é usar a adição de strings   EX: document.getElementById("demo").innerHTML = "Hello " + "Dolly!";
+
+    9.2- toUpperCase():
+        Uma string é convertida para letras maiúsculas com toUpperCase(). EX: let text1 = "Olá, Mundo!"; let text2 = text1.toUpperCase();  >>Resultado: OLÁ, MUNDO!
+
+    9.3- toLowerCase():
+        Uma string é convertida em letras minúsculas com toLowerCase().   EX: let text1 = "OLÁ, MUNDO!"; let text2 = text1.toLowerCase();  >>Resultado: Olá, Mundo!
+
+    9.4- Length:
+        A propriedade length retorna o comprimento de uma string.   EX: let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; let text2 = text.length;  >>Resultado: 26
+
+    9.5- indexOf(): 
+        O método indexOf() retorna o índice (posição) da primeira ocorrência de uma string em uma string: let texto = "Por favor, localize onde localizar ocorre!"; let index = text.indexOf("localizar");  >>Resultado: 26
+
+    9.6- slice(): 
+        slice() extrai uma parte de uma string e retorna a parte extraída em uma nova string. O método leva 2 parâmetros: posição inicial e posição final.   EX: let text = "Maçã, Banana, Kiwi"; let part = text.slice(7, 13);  >>Resultado: Banana
+
+    9.7- replace():
+        O método replace() substitui um valor especificado por outro valor em uma string. Por padrão, o substitui apenas a primeira correspondência e diferencia maiúsculas de minúsculas. EX: let text = "Visite a Microsoft!"; let newText = text.replace("Microsoft", "W3Schools");  >>Resultado: Visite a W3Schools
+
+    9.8- trim():
+        Remove os espaços em branco em uma string. EX: let nome = "     Carlos     "; let novoTexto = nome.trim();  >>Resultado: Carlos
+
+    9.9- lastindexOf:
+        O método lastindexOf() retorna o índice (posição) da última ocorrência de uma string em uma string: let texto = "Por favor, localize onde localizar ocorre!"; let index = text.lastindexOf("localizar");  >>Resultado: 26
+
+10- Métodos Arrays:
+    10.1- Introdução: 
+        Esses métodos array podem ser usados ​​em todas as matrizes JavaScript.
+
+    10.2- length:
+        A propriedade length de uma matriz retorna o comprimento de uma matriz (o número de elementos da matriz).   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; let comp = frutas.length;  >>Resultado: 4
+
+    10.3- push(): 
+        O método push() adiciona um novo elemento a um array (no final).   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.push("Kiwi");  >>Resultado: Banana, Laranja, Maçã, Manga, Kiwi
+
+    10.4- pop(): 
+        O método pop() remove o último elemento de uma matriz.   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; fruits.pop()  >>Resultado: Banana,Laranja,Maçã
+
+    10.5- unshift():
+        O método unshift() adiciona um novo elemento a um array (no início).   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.unshift("Kiwi");  >>Resultado: Kiwi, Banana, Laranja, Maçã, Manga, Kiwi
+
+    10.6- shift();
+        O método shift() remove o primeiro elemento de uma matriz.   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.shift()  >>Resultado: Laranja, Maçã, Manga
+
+    10.7- Acessando o último elemento da matriz:  
+        EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; let frutas = frutas[frutas.length - 1];  >>Resultado: Manga
+
+    10.8- splice(): 
+        O método splice() pode ser usado para adicionar novos itens a um array.   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.splice(2, 0, "Limão", "Kiwi");   OBS (O primeiro parâmetro (2) define a posição onde novos elementos devem ser adicionados. O segundo parâmetro (0) define quantos elementos devem ser removidos)  >>Resultado: Banana, Laranja, Limão, Kiwi, Maçã, Manga
+
+    10.9- indexOf(): 
+        O método indexOf() procura um array por um valor de elemento e retorna sua posição.   EX: const frutas = ["Maçã", "Laranja", "Banana", "Manga"]; let posição = frutas.indexOf("Maçã") + 1;  >>Resultado: 1 OBS (O primeiro item tem a posição 0, o segundo item tem a posição 1 e assim por diante.)
+
+    10.10- Join:    
+        o método join transforma um array em uma string.  EX: var arr= ["O", "rato", "roeu", "a", "roupa"]; var texto = arr.join(" ");  >>Resultado: O rato roeu a roupa
+
+11- Objetos:
+    11.1- Introdução: 
+        Em JavaScript, quase "tudo" é um objeto. Um valor primitivo é um valor que não tem propriedades ou métodos. 3,14 é um valor primitivo. Um tipo de dados primitivo são dados que possuem um valor primitivo. JavaScript define 7 tipos de tipos de dados primitivos: string, number, boolean, null, undefined, symbol e bigint. Os valores primitivos são imutáveis ​​(são codificados e não podem ser alterados). Os objetos também são variáveis. Mas os objetos podem conter muitos valores. Você define (e cria) um objeto JavaScript com um objeto literal:   EX: const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    
+    11.2- Propriedades do Objeto: 
+        As propriedades são os valores associados a um objeto JavaScript. Um objeto JavaScript é uma coleção de propriedades não ordenadas. As propriedades geralmente podem ser alteradas, adicionadas e excluídas, mas algumas são somente leitura. Sintaxe: objectName.propriedade ou objectName["propriedade"].   EX: pessoa.idade ou pessoa["idade"]
+
+    11.3- Métodos de objeto JavaScript: 
+        Em JavaScript, a palavra-chave this se refere a um objeto. A palavra-chave this refere-se a diferentes objetos dependendo de como é usada. Você acessa um método de objeto com a seguinte sintaxe: objectName.methodName()   EX: const person = {  Nome: "João",  Sobrenome: "Gomes",  NomeCompleto : function() {  return this.Nome + " " + this.Sobrenome;  }  };
+
+12- DOM:
+    12.1- Introdução:
+        Com o DOM (Modelo de objeto de documento), o JavaScript pode acessar e alterar todos os elementos de um documento HTML.
+    
+    12.2- Métodos DOM: 
+        Os métodos DOM são ações que você pode executar (em elementos HTML). No DOM, todos os elementos HTML são definidos como objetos.   EX: document.getElementById("Exemplo").innerHTML = "Olá Mundo!";  OBS: A propriedade innerHTML pode ser usada para obter ou alterar qualquer elemento HTML.
+    
+    12.2- Documento DOM: 
+        O objeto de documento DOM é o proprietário de todos os outros objetos em sua página da web.
+        
+        12.2.1- O objeto de documento DOM: 
+            O objeto de documento representa sua página da web. Se você quiser acessar qualquer elemento em uma página HTML, sempre comece acessando o objeto do documento. Abaixo estão alguns exemplos de como você pode usar o objeto de documento para acessar e manipular HTML.
+
+        12.2.2- Adicionando e Excluindo Elementos: 
+            document.createElement(element)	[Cria um elemento HTML], document.removeChild(elemento) [Remove um elemento HTML], document.appendChild(elemento) [Adiciona um elemento HTML], document.replaceChild(novo, antigo)	[Substituir um elemento HTML] e document.write(texto) [Escreve no fluxo de saída do HTML].
+
+        12.2.3- Adicionando manipuladores de eventos: 
+            document.getElementById(id).onclick = function(){code} [Adicionando o código do manipulador de eventos a um evento onclick]
+
+    12.3- Elementos DOM: 
+        Encontrando Elementos HTML, Existem várias maneiras de fazer isso: Encontrando elementos HTML por id, Encontrando elementos HTML por nome de tag, Encontrando elementos HTML por nome de classe, Encontrando elementos HTML por seletores CSS.
+        
+        12.3.1- Encontrando Elemento HTML por Id: 
+            A maneira mais fácil de encontrar um elemento HTML no DOM é usando o id do elemento.   EX: const element = document.getElementById("intro");  >>Explicando: Este exemplo encontra o elemento com id="intro":
+
+        12.3.2- Encontrando elementos HTML por nome de tag:   
+            EX: const element = document.getElementsByTagName("p");  >>Explicando: Este exemplo localiza todos os elementos <p> 
+
+        21.3.3- Encontrando Elementos HTML por Nome de Classe: 
+            Se você deseja localizar todos os elementos HTML com o mesmo nome de classe, use getElementsByClassName().   EX: const x = document.getElementsByClassName("intro");  >>Explicando: Este exemplo retorna uma lista de todos os elementos com class="intro".
+
+        21.3.4- Encontrando Elementos HTML por Seletores CSS: 
+            Se você quiser encontrar todos os elementos HTML que correspondem a um seletor CSS especificado (id, nomes de classes, tipos, atributos, valores de atributos, etc.), use o querySelectorAll()método.   EX: const x = document.querySelectorAll("p.intro");  >>Explicando: Este exemplo retorna uma lista de todos os elementos <p> com class="intro".
+
+    12.4- 
+
