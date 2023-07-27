@@ -142,3 +142,19 @@ comCSS.style.backgroundColor = "yellow";
 // 2- Adicionando vários estilos:
 comCSS.style.cssText = "color: red; background-Color: yellow; text-decoration: underline;"
 
+
+
+// PROPRIEDADE DOCUMENT
+console.log("Propriedade Document:")
+
+console.log(document.body);
+console.log(document.head);
+
+console.log(document.links[0]);
+document.links[0].textContent = "Twitter";
+
+console.log(document.URL);
+
+console.log(document.title);
+document.title = "Aprendendo DOM";
+console.log(document.title);

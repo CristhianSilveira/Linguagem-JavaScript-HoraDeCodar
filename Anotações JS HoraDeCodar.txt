@@ -259,11 +259,8 @@ OBS: console.log vai ajudar muito nas dúvidas.
         12.7.2- Mudando o Estilo HTML: 
             Para alterar o estilo de um elemento HTML, use esta sintaxe: document.getElementById(id).style.property = new style   EX: var comCSS = document.querySelector('#teste-css');  comCSS.style.color = 'red'; >>Explicando: Este exemplo define a cor para vermelho
 
-    12.8 - ...
+13- Callback Functions:
+    13.1- Introdução:
+        Um callback é uma função passada como um argumento para outra função. Esta técnica permite que uma função chame outra função.   EX: function Primeiro() { player("Olá"); }  function Segundo() { player("Adeus"); }  Primeiro();  Segundo();  >>Resultado: Adeus
 
-        
-        
-        
-        12.3.3- Adicionando manipuladores de eventos: 
-            document.getElementById(id).onclick = function(){code} [Adicionando o código do manipulador de eventos a um evento onclick]
-
+14- Eventos:
