@@ -264,3 +264,20 @@ OBS: console.log vai ajudar muito nas dúvidas.
         Um callback é uma função passada como um argumento para outra função. Esta técnica permite que uma função chame outra função.   EX: function Primeiro() { player("Olá"); }  function Segundo() { player("Adeus"); }  Primeiro();  Segundo();  >>Resultado: Adeus
 
 14- Eventos:
+    14.1- Introdução: 
+        Um JavaScript pode ser executado quando ocorre um evento, como quando um usuário clica em um elemento HTML. Para executar o código quando um usuário clica em um elemento, adicione o código JavaScript a um atributo de evento HTML: onclick=JavaScript. Exemplos de eventos HTML: Quando um usuário clica no mouse, Quando uma página da web é carregada, Quando uma imagem foi carregada, Quando o mouse passa sobre um elemento, Quando um campo de entrada é alterado, Quando um formulário HTML é enviado e Quando um usuário pressiona uma tecla.   EX: <h1 onclick="this.innerHTML = 'Ooops!'">Clique neste texto!</h1>
+
+    14.2- Os eventos onload e onunload: 
+        Os eventos onload e onunload são acionados quando o usuário entra ou sai da página. O evento onload pode ser usado para verificar o tipo e a versão do navegador do visitante e carregar a versão adequada da página da Web com base nas informações. Os eventos onload e onunload podem ser usados ​​para lidar com cookies.
+
+    14.3- O evento onchange: 
+        O evento onchange geralmente é usado em combinação com a validação de campos de entrada. <input type="text" id="fname" onchange="upperCase()">  >>Explicando: A upperCase() função será chamada quando um usuário alterar o conteúdo de um campo de entrada.
+
+    14.4- Os eventos onmouseover e onmouseout: 
+        Os eventos onmouseover e onmouseout podem ser usados ​​para acionar uma função quando o usuário passa o mouse sobre ou tira o mouse de um elemento HTML respectivamente.   EX: var mudando = document.querySelector('#mudando');  mudando.addEventListener("mouseover", function(){ this.style.backgroundColor = "yellow"; });
+
+    14.5- Os eventos onmousedown, onmouseup, onclick e dblclick: 
+        Os eventos onmousedown, onmouseup e onclick são partes de um clique do mouse. Primeiro, quando um botão do mouse de click é pressionado, o evento onmousedown é acionado. Depois, quando o botão do mouse é liberado, o evento onmouseup é acionado. Depois, quando o clique do mouse é concluído, o evento onclick é acionado. Finalmente, quando o clique do mouse é acionado 2x, o evento dblclick é acionado.   EX: var btn = document.querySelector('#btn');  btn.addEventListener("click", function() { console.log("Clicou"); });
+
+    14.6- Os eventos keydown e keyup:
+        Os eventos keydown e keyup são partes do teclado. Primeiro, quando uma tecla é pressionada, o evento keydown é acionado. Depois, quando a tecla é liberada, o evento keyup é acionado.
