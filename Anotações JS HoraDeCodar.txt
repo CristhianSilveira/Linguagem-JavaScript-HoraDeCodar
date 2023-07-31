@@ -1,4 +1,8 @@
-                    Hora De Codar --- JavaScript ---
+                    --- Anotações JavaScript ---
+
+Canal: Hora De Codar: Playlist JS - 2021.
+Canal: Programação Web: JS em 6 horas - 2022.
+
 
 OBS: console.log vai ajudar muito nas dúvidas.
 
