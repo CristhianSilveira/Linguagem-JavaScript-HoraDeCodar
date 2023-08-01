@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        button {
+            margin-left: 50px;
+        }
+        div {
+            width: 500px; 
+            height: 100px; 
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Eventos:</h1>
+    <h2>Eventos de Clique:</h2>
+    <button onclick="eventoClick()">Clique aqui</button>
+    <button ondblclick="eventoDblClick()">Clique 2x aqui</button>
+
+    <h2>Evento de mouse:</h2>
+    <h3>onmouseover e onmouseout:</h3>
+    <div id="teste" onmouseover="viraVermelho()" onmouseout="viraAzul()">Entre e retire o mouse</div>
+    <h3>onmousemove:</h3>
+    <div  onmousemove="adicionaTexto()">
+    <p id="texto"></p>
+    </div>
+    <h3>onmousedown e onmouseup:</h3>
+    <div id="teste" onmousedown="alert('Clicou na div')" onmouseup="alert('Soltou o click')" >Clique na div e depois segure de enter e solte o click</div>
+
+    <h2>Eventos input:</h2>
+    <h3>onfocus:</h3>
+    <input onfocus="campoFocado()" id="campoTexto" type="text" placeholder="Digite alguma coisa aqui">
+    <h3>onchange:</h3>
+    <input onchange="mudou()" id="campoMudou" type="text" placeholder="Digite alguma coisa aqui">
+
+    <h2>Eventos teclado:</h2>
+    <p> Digite algo no input e abre o inspecionar</p>
+    
+    <input onkeydown="teclaPressionada()" id="campoTecla" type="text" placeholder="Pressione uma tecla">
+    
+    <input onkeypress="teclaPressionadaSolta()" id="campoTecla2" type="text" placeholder="Pressione a tecla e solte">
+    
+    <input onkeyup="teclaSolta()" id="campoTecla3" type="text" placeholder="Pressione a tecla e solte">
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
