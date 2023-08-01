@@ -1,4 +1,5 @@
 {
   "cSpell.words": ["Cristhian"],
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "editor.formatOnSave": false
 }
