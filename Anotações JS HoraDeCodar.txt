@@ -57,7 +57,7 @@ OBS: console.log vai ajudar muito nas dúvidas.
         Retorna o tipo da variável;   EX: var Frase = "Teste"   console.log(typeof Frase);  >>Resultado: string
 
     3.8- Arrays:
-        São considerados objetos em JS e serve como uma lista; As propriedades são por índice; Usa-se o colchete;
+        São considerados objetos em JS e serve como uma lista; As propriedades são por índice; Usa-se o colchete;   EX: const lista = ["arroz", "feijão", "macarrão", "leite"];
 
 4- Operadores:
     4.1- Operadores Aritméticos: 
@@ -171,7 +171,7 @@ OBS: console.log vai ajudar muito nas dúvidas.
         O método pop() remove o último elemento de uma matriz.   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; fruits.pop()  >>Resultado: Banana,Laranja,Maçã
 
     10.5- unshift():
-        O método unshift() adiciona um novo elemento a um array (no início).   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.unshift("Kiwi");  >>Resultado: Kiwi, Banana, Laranja, Maçã, Manga, Kiwi
+        O método unshift() adiciona um novo elemento a um array (no início).   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.unshift("Kiwi");  >>Resultado: Kiwi, Banana, Laranja, Maçã, Manga
 
     10.6- shift();
         O método shift() remove o primeiro elemento de uma matriz.   EX: const frutas = ["Banana", "Laranja", "Maçã", "Manga"]; frutas.shift()  >>Resultado: Laranja, Maçã, Manga
@@ -187,6 +187,9 @@ OBS: console.log vai ajudar muito nas dúvidas.
 
     10.10- Join:    
         o método join transforma um array em uma string.  EX: var arr= ["O", "rato", "roeu", "a", "roupa"]; var texto = arr.join(" ");  >>Resultado: O rato roeu a roupa
+
+    10.11- sort():
+        O método sort() classifica uma matriz em ordem alfabética.   EX: const nomes = ["Bruna", "Daniel", "Ana", "Carlos"]; nomes.sort();  >>Resultado: Ana, Bruna, Carlos, Daniel
 
 11- Objetos:
     11.1- Introdução: 
