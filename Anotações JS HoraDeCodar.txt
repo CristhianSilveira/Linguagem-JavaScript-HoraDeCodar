@@ -290,3 +290,89 @@ OBS: console.log vai ajudar muito nas dúvidas.
 
     14.6- Os eventos keydown e keyup:
         Os eventos keydown e keyup são partes do teclado. Primeiro, quando uma tecla é pressionada, o evento keydown é acionado. Depois, quando a tecla é liberada, o evento keyup é acionado.
+
+15- Cronometragem:
+    15.1- O método setTimeout(): 
+        O método setTimeout() Executa uma função, após aguardar um número especificado de milissegundos. Sintaxe: setTimeout(function, milliseconds);   EX: tempo = setTimeout(function() { document.getElementById("tempo").innerHTML = "Executou o setTimeout"; }, 5000);
+
+    15.2- O método clearTimeout():
+        O método clearTimeout() para a execução do setTimeout(); Sintaxe: clearTimeout([variável]).   EX: clearTimeout(tempo); document.getElementById("tempo").innerHTML = "Parou a contagem";
+
+    15.3- O método setInterval(): 
+        O método setInterval() repete uma determinada função em cada intervalo de tempo determinado. Sintaxe: setInterval(function, milliseconds);   EX: tempo2 = setInterval(function() { var cronometro = document.getElementById("tempo2").innerHTML; var soma = parseInt(cronometro) + 1; document.getElementById("tempo2").innerHTML = soma; }, 1000);
+
+    15.4- 15.2- O método clearInterval():
+        O método clearInterval() para a execução do setInterval(); Sintaxe: clearInterval([variável]).   EX: clearInterval(tempo2); document.getElementById("tempo").innerHTML = "Parou a contagem";
+
+16- Classes:
+    16.1- Introdução:
+        Em JavaScript, uma classe é uma estrutura que permite criar objetos com características e comportamentos semelhantes. Ela é uma forma de definir um "molde" para criar múltiplas instâncias de objetos com propriedades e métodos específicos.  Sintaxe: class ClassName {  constructor() { ... }  };   EX: class Carro { constructor(marca, modelo, ano) { this.marca = marca; this.modelo = modelo; this.ano = ano; } };
+
+17- Datas:
+    17.1- Criando Objetos de Data: 
+        Os objetos de data são criados com o construtor new Date(). Existem 9 maneiras de criar um novo objeto de data:
+        
+        17.1.1- JavaScript new date(): 
+            new Date() cria um objeto de data com a data e hora atuais.   EX: const d = new Date();
+
+        17.1.2- New date (date string): 
+            new Date(date string) cria um objeto de data fixo a partir de uma string de data.   EX: const d = new Date("Outubro 13, 2022 11:15:00");  >>Resultado: Seg, 13 de outubro de 2022 11:15:00 GMT-0300 (Horário Padrão de Brasília)
+
+        17.1.3- New date (ano, mês, ...):
+            new Date(year, month, ...) cria um objeto de data com data e hora com 7 números especificando ano, mês, dia, hora, minuto, segundo e milissegundo (nessa ordem).   EX: const d = new Date(2022, 11, 24, 10, 35, 30, 0); >>Resultado: Seg, 24 de dezembro de 2022 10:35:30 GMT-0200 (Horário de Verão de Brasília)   OBS: JavaScript conta meses de 0 a 11 (Janeiro = 0 e Dezembro = 11)
+
+        17.1.4- Formato legível de Data: 
+            O método toDateString() converte uma data em um formato mais legível.   EX: const d = new Date(); d.toDateString();
+
+    17.2- Formatos de Data: 
+        Existem geralmente 3 tipos de formatos de entrada de data JavaScript: Data ISO, data curta e data longa
+        
+        17.2.1- Datas ISO: 
+            ISO 8601 é o padrão internacional para a representação de datas e horas. A sintaxe ISO 8601 (AAAA-MM-DD) também é o formato de data JavaScript preferido.   EX: const d = new Date("2015-03-24");  >>Resultado: Terça-feira, 24 de março de 2015 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+        17.2.2- Datas curtas: 
+            Datas curtas são escritas com uma sintaxe "MM/DD/AAAA".   EX: const d = new Date("03/25/2015"); >>Resultado: Quarta-feira, 25 de março de 2015 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+        17.2.3- Datas longas: 
+            Datas longas geralmente são escritas com uma sintaxe "MMM DD YYYY".   EX: const d = new Date("Mar 25 2015");  >>Resultado: Quarta-feira, 25 de março de 2015 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+    17.3- Métodos de obtenção de data: 
+        17.3.1- getFullYear(): 
+            O método getFullYear() retorna o ano atual do sistema.   EX: const d = new Date(); d.getFullYear();  >>Resultado: 2023(no meu caso)
+
+        17.3.2- getMonth(): 
+            O método getMonth() retorna o mês atual do sistema com um número entre (0-11).  OBS: Em JavaScript, janeiro é o mês número 0, fevereiro é o número 1 e  dezembro é o mês número 11.   EX: const d = new Date(); d.getMonth() + 1;  >>Resultado: 05 (no meu caso)
+
+        17.3.3- getDate(): 
+            O método getDate() retorna o dia atual do sistema com um número (1-31).   EX: const d = new Date(); d.getDate();  >>Resultado: 14 (no meu caso)
+
+        17.3.4- getDay():
+            O método getDay() retorna o dia da semana do sistema com um número (0-6).   OBS: Em JavaScript, domingo é o dia da semana número 0, segunda é o número 1 e  sábado é o dia da semana número 6.   EX: const d = new Date(); d.getDay() + 1;  >>Resultado: 01 (no meu caso)
+
+        17.3.5- getHours(): 
+            O método getHours() retorna a hora atual do sistema com um número (0-23).   EX: const d = new Date(); d.getHours(); >>Resultado: 12 (no meu caso)
+
+        17.3.6- getMinutes(): 
+            O método getMinutes() retorna os minutos atual do sistema com um número (0-59).   EX: const d = new Date(); d.getMinutes();  >>Resultado: 35 (no meu caso)
+
+        17.3.7- getSeconds(): 
+            O método getSeconds() retorna os segundos atuais do sistema com um número (0-59).   EX: const d = new Date(); d.getSeconds(); >>Resultado: 14 (no meu caso)
+
+    17.4- Data Brasileira:
+        O método toLocaleString(), coloca a data padrão do país atual do sistema.   EX: let dataBR = data.toLocaleString('pt-BR');
+
+18- JSON:
+    18.1- Introdução:
+        JSON (Java Script Object Notation) é um formato para armazenar e transportar dados. JSON é frequentemente usado quando os dados são enviados de um servidor para uma página da web. Explicando de um modo simples converte objeto em texto ou um texto em objeto.
+        
+    18.2- Regras de sintaxe JSON: 
+        Os dados estão em pares nome/valor, Os dados são separados por vírgulas, Chaves seguram objetos e Os colchetes contêm matrizes.
+        
+    18.3- Dados JSON: 
+        um nome e um valor: Os dados JSON são gravados como pares de nome/valor, assim como as propriedades do objeto JavaScript. Um par nome/valor consiste em um nome de campo (entre aspas duplas), seguido por dois pontos, seguido por um valor.   EX: "firstName":"John"
+        
+    18.4- Objetos JSON: 
+        Os objetos JSON são escritos entre chaves. Assim como em JavaScript, os objetos podem conter vários pares nome/valor.   EX:{"firstName":"John", "lastName":"Doe"}
+        
+    18.5- Matrizes JSON: 
+        As matrizes JSON são escritas entre colchetes. Assim como em JavaScript, um array pode conter objetos.   EX:"Funcionários":[ {"Nome":"João", "Sobrenome":"Gomes"}, {"Nome":"Anna", "Sobrenome":"Silva"}, {"Nome":"Pedro", "Sobrenome":"Santos"} ]  >>Explicando: No exemplo anterior, o objeto "funcionários" é um array. Ele contém três objetos. Cada objeto é um registro de uma pessoa (com um nome e um sobrenome).
