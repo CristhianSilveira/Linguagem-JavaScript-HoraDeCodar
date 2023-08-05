@@ -41,3 +41,11 @@ console.log(somaUm);
 
 var somaDois = soma(5,5);
 console.log(somaDois)
+
+
+
+// arrow function
+const myArrowFunction = (a, b) => {
+    return a + b;
+}
+console.log(myArrowFunction(3, 5));
